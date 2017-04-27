@@ -98,3 +98,6 @@ build/
 
 # Windows 
 Thumbs.db
+*.ply
+*.db
+*.opendb

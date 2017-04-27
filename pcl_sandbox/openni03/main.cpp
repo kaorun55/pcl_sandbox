@@ -1,7 +1,7 @@
 // thanks http://ros-robot.blogspot.jp/2011/08/pclapi-point-cloud-library-pcl-pcl-api.html
 #include <iostream>
 #include <pcl/ModelCoefficients.h>
-#include <pcl/io/openni_grabber.h>
+#include <pcl/io/openni2_grabber.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 #include <pcl/sample_consensus/method_types.h>
@@ -75,7 +75,7 @@ void main()
     };
 
     // OpenNI‚Ì“ü—Í‚ðì‚é
-    pcl::Grabber* interface = new pcl::OpenNIGrabber();
+    pcl::Grabber* interface = new pcl::io::OpenNI2Grabber();
     interface->registerCallback( f );
     interface->start();
     while ( !viewer.wasStopped() ) {
